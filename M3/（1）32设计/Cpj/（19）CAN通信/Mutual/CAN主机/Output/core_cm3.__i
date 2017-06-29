@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\inc -I..\FWlib\src -I D:\(7)KEIL\ARM\RV31\Inc -I D:\(7)KEIL\ARM\CMSIS\Include -I D:\(7)KEIL\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o "..\Output\core_cm3.o" --omf_browse "..\Output\core_cm3.crf" --depend "..\Output\core_cm3.d" "..\CMSIS\core_cm3.c"

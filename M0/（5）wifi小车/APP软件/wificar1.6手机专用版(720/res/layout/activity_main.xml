@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/sias_6" >
+
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginLeft="33dp"
+		android:layout_marginTop="42dp"
+		android:text="上力臂"
+		android:textColor="#ff0000"
+		android:textSize="25sp" />
+
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/textView1"
+		android:layout_alignBottom="@+id/textView1"
+		android:layout_marginLeft="48dp"
+		android:layout_toRightOf="@+id/textView1"
+		android:text="下力臂"
+		android:textColor="#ff0000"
+		android:textSize="25sp" />
+
+	<ToggleButton
+		android:id="@+id/left_toggleButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignRight="@+id/textView1"
+		android:layout_below="@+id/textView1"
+		android:layout_marginTop="38dp"
+		android:text="ToggleButton" />
+
+	<RatingBar
+		android:id="@+id/ratingBar1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginBottom="32dp"
+		android:numStars="5"
+		android:rating="1.0"
+		android:stepSize="1.0" />
+
+	<ImageButton
+		android:id="@+id/forward"
+		android:layout_width="84dp"
+		android:layout_height="84dp"
+		android:layout_above="@+id/right_toggleButton"
+		android:layout_alignLeft="@+id/stop"
+		android:background="@drawable/forward1"
+		android:scaleType="fitXY"
+		android:src="@drawable/forward1" />
+
+	<ImageButton
+		android:id="@+id/right"
+		android:layout_width="84dp"
+		android:layout_height="84dp"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/forward"
+		android:background="@drawable/right1"
+		android:scaleType="fitXY"
+		android:src="@drawable/right1" />
+
+	<ToggleButton
+		android:id="@+id/right_toggleButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/left_toggleButton"
+		android:layout_alignBottom="@+id/left_toggleButton"
+		android:layout_alignLeft="@+id/textView2"
+		android:text="ToggleButton" />
+
+	<ImageButton
+		android:id="@+id/left"
+		android:layout_width="84dp"
+		android:layout_height="84dp"
+		android:layout_alignTop="@+id/right"
+		android:layout_toLeftOf="@+id/stop"
+		android:background="@drawable/left1"
+		android:scaleType="fitXY"
+		android:src="@drawable/left1" />
+	<!--
+      <TextView
+		android:id="@+id/textView3"
+		android:layout_width="128dp"
+		android:layout_height="44dp"
+		android:layout_alignBottom="@+id/textView2"
+		android:layout_toRightOf="@+id/ratingBar1"
+		android:scaleType="fitXY"
+		android:text="小车控制"
+		android:textColor="#ff0000"
+		android:textSize="25sp" />
+	-->
+
+	<ImageButton
+		android:id="@+id/stop"
+		android:layout_width="84dp"
+		android:layout_height="84dp"
+		android:layout_below="@+id/forward"
+		android:layout_toLeftOf="@+id/right"
+		android:onClick="onclick"
+		android:src="@drawable/stop" />
+
+	<ImageButton
+		android:id="@+id/backward"
+		android:layout_width="84dp"
+		android:layout_height="84dp"
+		android:layout_below="@+id/stop"
+		android:layout_toRightOf="@+id/left"
+		android:background="@drawable/backward1"
+		android:scaleType="fitXY"
+		android:src="@drawable/backward1" />
+
+</RelativeLayout>

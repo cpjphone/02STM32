@@ -1,0 +1,33 @@
+*** Creating Trace Output File '..\OBJ\TLC549.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\obj\main.o"'
+### List of Objects: adding '"..\obj\stm32f10x_it.o"'
+### List of Objects: adding '"..\obj\system_stm32f10x.o"'
+### List of Objects: adding '"..\obj\board_init.o"'
+### List of Objects: adding '"..\obj\iospi.o"'
+### List of Objects: adding '"..\obj\nrf24l01.o"'
+### List of Objects: adding '"..\obj\delay.o"'
+### List of Objects: adding '"..\obj\sys.o"'
+### List of Objects: adding '"..\obj\usart.o"'
+### List of Objects: adding '"..\obj\core_cm3.o"'
+### List of Objects: adding '"..\obj\startup_stm32f10x_md.o"'
+### List of Objects: adding '"..\obj\misc.o"'
+### List of Objects: adding '"..\obj\stm32f10x_gpio.o"'
+### List of Objects: adding '"..\obj\stm32f10x_usart.o"'
+### List of Objects: adding '"..\obj\stm32f10x_rcc.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "..\obj\main.o" "..\obj\stm32f10x_it.o" "..\obj\system_stm32f10x.o" "..\obj\board_init.o" "..\obj\iospi.o" "..\obj\nrf24l01.o" "..\obj\delay.o" "..\obj\sys.o" "..\obj\usart.o" "..\obj\core_cm3.o" "..\obj\startup_stm32f10x_md.o" "..\obj\misc.o" "..\obj\stm32f10x_gpio.o" "..\obj\stm32f10x_usart.o" "..\obj\stm32f10x_rcc.o" --strict --scatter "..\OBJ\TLC549.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "..\List\TLC549.map" -o ..\OBJ\TLC549.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\OBJ\TLC549.axf'
+### ADS-LD Command File: '..\OBJ\TLC549.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\OBJ\TLC549.lnp', Handle=0x000002BC
+### Writing '.lnp' file
+### ADS-LD Command file '..\OBJ\TLC549.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

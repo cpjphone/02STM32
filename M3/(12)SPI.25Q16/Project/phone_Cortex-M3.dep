@@ -1,0 +1,142 @@
+Dependencies for Project 'phone', Target 'Cortex-M3': (DO NOT MODIFY !)
+F (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.c)(0x4C0C587E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\core_cm3.o --omf_browse ..\obj\core_cm3.crf --depend ..\obj\core_cm3.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+F (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)()
+F (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_hd.s)(0x545D9CFC)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x--list ..\obj\list\startup_stm32f10x_hd.lst --xref -o ..\obj\startup_stm32f10x_hd.o --depend ..\obj\startup_stm32f10x_hd.d)
+F (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c)(0x54618E36)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\system_stm32f10x.o --omf_browse ..\obj\system_stm32f10x.crf --depend ..\obj\system_stm32f10x.d)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)()
+F (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)()
+F (..\Source\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c)(0x4D783BB4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\misc.o --omf_browse ..\obj\misc.crf --depend ..\obj\misc.d)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+F (..\Source\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c)(0x4D79EEC6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_gpio.o --omf_browse ..\obj\stm32f10x_gpio.crf --depend ..\obj\stm32f10x_gpio.d)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Source\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c)(0x4D783BB4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_rcc.o --omf_browse ..\obj\stm32f10x_rcc.crf --depend ..\obj\stm32f10x_rcc.d)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Source\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c)(0x4D783BB4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_usart.o --omf_browse ..\obj\stm32f10x_usart.crf --depend ..\obj\stm32f10x_usart.d)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Source\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c)(0x527F2CCB)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_spi.o --omf_browse ..\obj\stm32f10x_spi.crf --depend ..\obj\stm32f10x_spi.d)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Source\APP\App.c)(0x546B07B4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\app.o --omf_browse ..\obj\app.crf --depend ..\obj\app.d)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Source\BSP\BSP.h)(0x545B33CB)
+I (..\Source\BSP\usart\bsp_usart1.h)(0x50D5C985)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
+I (..\Source\BSP\spi\bsp_spi_flash.h)(0x5273539A)
+F (..\Source\APP\stm32f10x_it.c)(0x54618F0B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
+I (..\Source\APP\stm32f10x_it.h)(0x54618C56)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
+F (..\Source\APP\stm32f10x_conf.h)(0x546B037B)()
+F (..\Source\APP\stm32f10x_it.h)(0x54618C56)()
+F (..\Source\BSP\BSP.c)(0x54618C9F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp.o --omf_browse ..\obj\bsp.crf --depend ..\obj\bsp.d)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (..\Source\BSP\usart\bsp_usart1.h)(0x50D5C985)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
+F (..\Source\BSP\usart\bsp_usart1.c)(0x54618DB3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_usart1.o --omf_browse ..\obj\bsp_usart1.crf --depend ..\obj\bsp_usart1.d)
+I (..\Source\BSP\usart\bsp_usart1.h)(0x50D5C985)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7C554)
+F (..\Source\BSP\spi\bsp_spi_flash.c)(0x546AF894)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Source\Libraries\CMSIS\CM3\CoreSupport -I..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Source\APP -I..\Source\BSP -I..\Source\BSP\usart -I..\Source\BSP\spi-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_spi_flash.o --omf_browse ..\obj\bsp_spi_flash.crf --depend ..\obj\bsp_spi_flash.d)
+I (..\Source\BSP\spi\bsp_spi_flash.h)(0x5273539A)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x545B360A)
+I (..\Source\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x4D523B58)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Source\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x54618E3E)
+I (..\Source\APP\stm32f10x_conf.h)(0x546B037B)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x53300BDF)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
+I (..\Source\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
+F (..\Doc\readme.txt)(0x54618F47)()

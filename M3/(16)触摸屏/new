@@ -1,0 +1,249 @@
+/**
+  ******************************************************************************
+  * @file    APP.c
+  * @author  phone
+  * @version V1.0
+  * @date    2014-11-06
+  * @brief   ²âÊÔled
+  ******************************************************************************
+  * @attention
+  *
+  * @{ÊµÑéÆ½Ì¨:Ò°»ð iSO STM32 ¿ª·¢°å 
+  * @{ÑÅµäÄÈ³ÌÐòÕûÀí	
+	* @{ µ±ÎÒÃÇ´ø´®¿ÚÖÐ¶ÏµÄÊ±ºò£¬ÆÁÄ»µÄË¢ÆÁËÙÂÊ¾Í»áÂýÐí¶à
+	--cpu Cortex-M3 -g --apcs=interwork 
+	-I C:\Keil\ARM\RV31\INC 
+  ******************************************************************************
+  */ 
+	
+/* Includes ------------------------------------------------------------------*/
+#include <stm32f10x.h>
+#include "BSP.h"
+//#include "bsp_led.h"  
+#include "bsp_usart1.h"
+#include "bsp_ili9341_lcd.h"
+#include "bsp_touch.h"
+#include "bsp_spi_flash.h"
+#include "bsp_led.h" 
+
+uint32_t n;
+
+#ifdef Q_2516
+/*¶¨ÒåÒ»¸öÃ¶¾ÙÀàÐÍ£¬´ËÖÐ±äÁ¿×ö±æ±ðÕæÎ±*/
+typedef enum { FAILED = 0, PASSED = !FAILED} TestStatus;
+/* »ñÈ¡»º³åÇøµÄ³¤¶È */
+#define TxBufferSize1   (countof(TxBuffer1) - 1)
+#define RxBufferSize1   (countof(TxBuffer1) - 1)
+#define countof(a)      (sizeof(a) / sizeof(*(a)))  //aµÄ×Ü×Ö½ÚÊý³ýÒÔÃ¿¸ö±äÁ¿µÄ×Ö½ÚÊýµÈÓÚÓÐ¶àÉÙ¸ö±äÁ¿£¨³ÉÔ±£©
+	//sizeof ²»ÊÇÒ»¸öº¯Êý£¬¶øÊÇÒ»¸ö¹Ø¼ü×Ö
+#define  BufferSize (countof(Tx_Buffer)-1)
+
+#define  FLASH_WriteAddress     0x00000
+#define  FLASH_ReadAddress      FLASH_WriteAddress
+#define  FLASH_SectorToErase    FLASH_WriteAddress
+//#define  sFLASH_ID              0xEF3015     //W25X16
+#define  sFLASH_ID              0xEF4015	 //W25Q16  (Á½ÕßÆäËûº¯ÊýÒ»Ñù£¬Ö»ÊÇÆ÷¼þµØÖ·²»Ò»Ñù)
+ 
+/* ·¢ËÍ»º³åÇø³õÊ¼»¯ */
+uint8_t Tx_Buffer[] = " ¸ÐÐ»ÄúÑ¡ÓÃÒ°»ðstm32¿ª·¢°å\r\n                http://firestm32.taobao.com";
+uint8_t Rx_Buffer[BufferSize];
+
+__IO uint32_t DeviceID = 0;
+__IO uint32_t FlashID = 0;
+__IO TestStatus TransferStatus1 = FAILED;
+
+void Delay(__IO u32 nCount); 
+/*^_^ ¾­µäµÄº¯Êý±äÁ¿¶¨Òå*/
+TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength);
+#endif
+
+
+void Delay(__IO u32 nCount); 
+
+#if 1
+/**---------------------------------------------------------------------------------
+  * @brief       Ö÷º¯Êý.
+  * @param    		ÎÞ
+  *	@arg         NULL
+  * @retval     null
+  ---------------------------------------------------------------------------------*/
+int main(void)
+{
+	/*Ê×ÏÈÊÇµ÷ÓÃÏµÍ³Ê±ÖÓ£¬ÔÚ3.0°æ±¾µÄ¿âÖÐ£¬
+	ÔÚmainº¯ÊýÖÐÈÔÐèµ÷ÓÃ£¬ÔÚ3.5°æ±¾ÖÐ£¬
+	ÏµÍ³Ê±ÖÓ·ÅÔÚÁËÆô¶¯ÎÄ¼þÕâÀï
+	º¯ÊýÔËÐÐµÄÊ±ºòÊÇÏÈ´ÓÕâ¸ö»ã±àº¯ÊýÖ´ÐÐµÄ
+	Æô¶¯ÎÄ¼þ 151ÐÐ    £º
+	LDR     R0, =SystemInit			  ;ÉèÖÃÏµÍ³Ê±ÖÓ
+	SetSysClock();	
+	*/
+	/*±ãÓÚÔÚÏßµ÷ÊÔ*/
+	#ifdef DEBUG
+		debug();
+	#endif
+	
+	uint8_t k;
+	/*ÍâÉèÓ²¼þ³õÊ¼»¯*/
+	ALL_Config();
+	
+#ifdef Q_2516	
+	/* Get SPI Flash Device ID */
+	DeviceID = SPI_FLASH_ReadDeviceID();
+	
+	Delay( 200 );
+	
+	/* Get SPI Flash ID */
+	FlashID = SPI_FLASH_ReadID();
+	
+	printf("\r\n FlashID is 0x%X,  Manufacturer Device ID is 0x%X\r\n", FlashID, DeviceID);
+	/* Check the SPI Flash ID */
+	if (FlashID == sFLASH_ID)  /* #define  sFLASH_ID  0xEF3015 */
+	{	
+		printf("\r\n ¼ì²âµ½»ª°î´®ÐÐflash W25X16 !\r\n");
+		
+		/* Erase SPI FLASH Sector to write on */
+		SPI_FLASH_SectorErase(FLASH_SectorToErase);	 	 
+		
+		/* ½«·¢ËÍ»º³åÇøµÄÊý¾ÝÐ´µ½flashÖÐ */
+		SPI_FLASH_BufferWrite(Tx_Buffer, FLASH_WriteAddress, BufferSize);
+		printf("\r\n Ð´ÈëµÄÊý¾ÝÎª£º%s \r\t", Tx_Buffer);
+		
+		/* ½«¸Õ¸ÕÐ´ÈëµÄÊý¾Ý¶Á³öÀ´·Åµ½½ÓÊÕ»º³åÇøÖÐ */
+		SPI_FLASH_BufferRead(Rx_Buffer, FLASH_ReadAddress, BufferSize);
+		printf("\r\n ¶Á³öµÄÊý¾ÝÎª£º%s \r\n", Tx_Buffer);
+		
+		/* ¼ì²éÐ´ÈëµÄÊý¾ÝÓë¶Á³öµÄÊý¾ÝÊÇ·ñÏàµÈ */
+		TransferStatus1 = Buffercmp(Tx_Buffer, Rx_Buffer, BufferSize);
+		
+		if( PASSED == TransferStatus1 )
+		{    
+			printf("\r\n 2M´®ÐÐflash(W25X16)²âÊÔ³É¹¦!\n\r");
+		}
+		else
+		{        
+			printf("\r\n 2M´®ÐÐflash(W25X16)²âÊÔÊ§°Ü!\n\r");
+		}
+	}// if (FlashID == sFLASH_ID)
+	else
+	{    
+		printf("\r\n »ñÈ¡²»µ½ W25X16 ID!\n\r");
+	}
+	
+	SPI_Flash_PowerDown(); 
+#endif
+	
+	LCD_Init();	
+	/* GRAMÉ¨Ãè·½ÏòÎª×óÏÂ½Å->ÓÒÉÏ½Ç */
+  Lcd_GramScan(2);
+	LCD_Clear(0, 0, 320, 240, BACKGROUND);
+	SPI_FLASH_Init();
+	
+#if 0
+	LCD_Clear(0, 0, 240, 320, BACKGROUND);	
+  
+	LCD_DispChar(60, 60, 'A', RED);
+
+  
+	LCD_DispStr(10, 10, (uint8_t *)"This is a lcd demo to display ascii", RED);	
+	
+	LCD_DispStr(40, 100, (uint8_t *)"count:", RED);
+	
+	for( n=0; n<500000; n++ )
+	{
+		LCD_DisNum(100, 100, n, RED);	
+		Lcd_Delay(0xAFFf>>4);
+	}
+#endif
+	
+	 /* ´¥ÃþÆÁIOºÍÖÐ¶Ï³õÊ¼»¯ */
+  Touch_Init();
+	/*-------------------------------------------------------------------------------------------------------*/  
+  #if 1
+  SPI_FLASH_BufferRead(&cal_flag, 0, 1);
+  if( cal_flag == 0x55 )	//ÖØÐÂ½ÃÕý ¿ÉÐÞ¸Ä³É0x11£¬Èç¹ûÎª11µÄ»°ÔòÐèÒª½ÃÕý
+  {
+    SPI_FLASH_BufferRead((void*)cal_p, 1, sizeof(cal_p));
+    SPI_FLASH_CS_HIGH();
+    for( k=0; k<6; k++ )
+          printf("\r\n rx = %LF \r\n",cal_p[k]);
+  }
+  else
+  {
+    /* µÈ´ý´¥ÃþÆÁÐ£ÕýÍê±Ï */
+    while(Touch_Calibrate() !=0);
+  }
+  #elif 0
+  /* µÈ´ý´¥ÃþÆÁÐ£ÕýÍê±Ï */
+  while(Touch_Calibrate() !=0);
+  #endif
+/*------------------------------------------------------------------------------------------------------*/  
+  //Touch_Init();
+  /* ´¥ÃþÈ¡É«°å³õÊ¼»¯ */
+  Palette_Init();
+  
+	while( 1 )
+  {
+    if(touch_flag == 1)			/*Èç¹û´¥±Ê°´ÏÂÁË*/
+    {
+      /*»ñÈ¡µãµÄ×ø±ê*/
+      if(Get_touch_point(&display, Read_2046_2(), &touch_para ) !=DISABLE)      
+      {					
+        Palette_draw_point(display.x,display.y);
+        LED1_TOGGLE;       
+      }
+    }		
+  }
+}
+#endif
+
+
+#ifdef Q_2516
+/**---------------------------------------------------------------------------------
+ * @brief Buffercmp
+ * @param º±È½ÏÁ½¸ö»º³åÇøÖÐµÄÊý¾ÝÊÇ·ñÏàµÈ
+ * @arg    -pBuffer1     src»º³åÇøÖ¸Õë
+ *         -pBuffer2     dst»º³åÇøÖ¸Õë
+ *         -BufferLength »º³åÇø³¤¶È
+ * @retval  ÎÞ
+ * @retval -PASSED pBuffer1 µÈÓÚ   pBuffer2
+ *         -FAILED pBuffer1 ²»Í¬ÓÚ pBuffer2
+ ---------------------------------------------------------------------------------*/
+TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength)
+{
+  while(BufferLength--)
+  {
+    if(*pBuffer1 != *pBuffer2)
+    {
+      return FAILED;
+    }
+
+    pBuffer1++;
+    pBuffer2++;
+  }
+  return PASSED;
+}
+#endif
+
+/**---------------------------------------------------------------------------------
+  * @brief       CPUÑÓÊ±º¯Êý
+  * @param    		ÎÞ
+  ---------------------------------------------------------------------------------*/
+void Delay(__IO uint32_t nCount)	 //¼òµ¥µÄÑÓÊ±º¯Êý
+{
+	for(; nCount != 0; nCount--);
+}
+
+/**---------------------------------------------------------------------------------
+  * @brief       ¼ì²â´«µÝ¸øº¯ÊýµÄ²ÎÊýÊÇ·ñÊÇÓÐÐ§µÄ²ÎÊý
+  * @param    		ÎÞ
+	* @example		 Ä³¸ö²ÎÊýµÄÈ¡Öµ·¶Î§Ö»ÄÜÊÇÐ¡ÓÚ3µÄÕýÕûÊý£¬Èç¹û¸ø³öµÄ²ÎÊý´óÓÚ3£¬
+	* @example	   ÔòÕâ¸öassert_param()¿ÉÒÔÔÙÔËÐÐ³ÌÐòµ÷ÓÃµ½Õâ¸öº¯ÊýÊ±±¨´í			
+  ---------------------------------------------------------------------------------*/
+#ifdef DEBUG
+void assert_failed(uint8_t* file, uint32_t line){
+while (1);}
+#endif
+/*********************************************END OF FILE**********************/
+
+
+
